@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>444.38</string>
+	<string>509</string>
 	<key>AMApplicationVersion</key>
-	<string>2.9</string>
+	<string>2.10</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -47,22 +47,11 @@
 				<key>ActionBundlePath</key>
 				<string>/System/Library/Automator/Run AppleScript.action</string>
 				<key>ActionName</key>
-				<string>运行 AppleScript</string>
+				<string>运行AppleScript</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}
-	
-	(* Your script goes here *)
-	tell application "Terminal"
-		reopen
-		activate
-		try
-			do script "python3 ~/Desktop/PackRobot/pack.py" in window 1
-		end try
-	end tell
-	
-end run</string>
+					<string>on run {input, parameters}		(* Your script goes here *)	tell application "Terminal"		reopen		activate		try			do script "python ~/Desktop/HeteClient/DailyBuild/DailyBuild.py" in window 1		end try	end tell	end run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -116,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>302.500000:315.000000</string>
+				<string>309.000000:315.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
